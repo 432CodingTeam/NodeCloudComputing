@@ -1,21 +1,11 @@
-const HashMap=require("hashmap")
+const HashMap = require("hashmap")
 
-
-let map = new HashMap()
-let mapone =new HashMap()
-mapone.set("2","qwe")
-data={
-  mapone:mapone,
-  id:"df"
-}
-
-map.set("1",data)
-
-let one=map.get("1")
-
-console.log(one['mapone'].get("2"))
-
-one.mapone.set("3","etty")
-
-console.log(one['mapone'].get("3"))
-console.log(map.get("1")['mapone'].get("3"))
+let lista=new HashMap()
+let listb=[]
+lista.set(1,6)
+lista.set(2,4)
+lista.set(3,5)
+lista.forEach(function(value,key){
+  listb.push(value)
+})
+console.log(listb)
